@@ -22,7 +22,7 @@
 					v.text("共 "+sum+" 条犇犇，已删除 "+(++cur)+" 条");
 					if(++i>=d.feeds.result.length){
 						if(d.feeds.count>20){
-							setTimeout(function(){exec();},250);
+							setTimeout(function(){exec();},500);
 						}else{
 							v.text("已经删除完毕qwq");
 							setTimeout(function(){location.reload();},1000);
