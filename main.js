@@ -15,10 +15,7 @@
 			}
 			if(d.feeds.result.length==0){
 				v.text("已经删除完毕qwq");
-				v.animate({"opacity":"0"},3000,function(){
-					v.remove();
-					location.reload();
-				})
+				setTimeout(function(){location.reload();},1000);
 				return;
 			}
 			let i=0,int=setInterval(function(){
@@ -29,10 +26,7 @@
 							exec();
 						}else{
 							v.text("已经删除完毕qwq");
-							v.animate({"opacity":"0"},3000,function(){
-								v.remove();
-								location.reload();
-							});
+							setTimeout(function(){location.reload();},1000);
 						}
 						clearInterval(int);
 					}
