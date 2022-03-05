@@ -7,7 +7,6 @@
 		v.css({"width":window.innerWidth+"px","height":window.innerHeight+"px","line-height":window.innerHeight+"px"});
 	})
 	function exec(){
-		let b=0;
 		$.get("/api/feed/list?user="+uid).success(function(d){
 			if(sum==-1){
 				sum=d.feeds.count;
@@ -23,7 +22,7 @@
 					v.text("共 "+sum+" 条犇犇，已删除 "+(++cur)+" 条");
 					if(++i>=d.feeds.result.length){
 						if(d.feeds.count>20){
-							exec();
+							setTimeout(function(){exec();},250);
 						}else{
 							v.text("已经删除完毕qwq");
 							setTimeout(function(){location.reload();},1000);
@@ -31,7 +30,7 @@
 						clearInterval(int);
 					}
 				});
-			},200);
+			},250);
 		});
 	}
 	exec();
