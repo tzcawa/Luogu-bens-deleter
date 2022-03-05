@@ -30,7 +30,7 @@
 						clearInterval(int);
 					}
 				});
-			},250);
+			},500);
 		});
 	}
 	exec();
