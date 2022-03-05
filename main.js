@@ -1,5 +1,5 @@
 {
-	let uid=$("span.wrapper.hover>span>a").attr("href").match("/user/([0-9]+)")[1];
+	let uid=window._feInjection.currentUser.uid;
 	let cur=0,sum=-1,v=$("<span style='-webkit-touch-callout:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none;position:fixed;top:0;left:0;backdrop-filter:blur(5px);color:#000;display:block;text-align:center;z-index:114514'>正在准备，请稍候</span>");
 	v.css({"width":window.innerWidth+"px","height":window.innerHeight+"px","line-height":window.innerHeight+"px"});
 	$(document.body).append(v);
