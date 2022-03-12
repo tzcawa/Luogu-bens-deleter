@@ -39,9 +39,5 @@
 			},500);
 		});
 	}
-	if(!$.fn){
-		v=document.createElement("script");v.src="//cdn.luogu.com.cn/js/jquery-2.1.1.min.js";
-		v.onload=work;
-		document.body.append(v);
-	}else work();
+        work();
 }
