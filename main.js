@@ -3,11 +3,11 @@
     let uid=_feInjection.currentUser.uid,
     cur=0,
     sum=-1,
-    v=$("<div style='position:fixed;width:100%;height:100%;padding-top:5em;font-size:3em;top:0;left:0;backdrop-filter:blur(5px);color:#000;display:block;text-align:center;z-index:114514'><p>正在准备，请稍候</p></div>"),
-    w=$("<div style='font-size:20px;'></div>");
+    v=$("<div style='position:fixed;width:100%;height:100%;padding-top:5em;top:0;left:0;background-color:#fff;opacity:0.7;color:#000;display:block;text-align:center;z-index:114514'><p style='font-size:3em'>正在准备，请稍候</p></div>"),
+    w=$("<div style='font-size:1em'></div>"),
+    sto=setTimeout;
     v.append(w);
     $("body").append(v);
-    function sto(f,t){setTimeout(f,t);}
     function exec(){
         $.get("/api/feed/list?user="+uid,function(d){
             if(sum==-1){
